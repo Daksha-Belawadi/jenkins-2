@@ -1,0 +1,21 @@
+import sys
+if len(sys.argv) == 6:
+ marks = sys.argv[1:]
+ print("User provided input values:")
+else:
+ print("No input given - using default values:")
+ marks = ["80", "75", "68", "90", "85"] # default marks
+total = sum(eval(m) for m in marks)
+average = total / 5
+print("Average Marks:", average)
+if average >= 85:
+ grade = "A"
+elif average >= 70:
+ grade = "B"
+elif average >= 55:
+ grade = "C"
+elif average >= 40:
+ grade = "D"
+else:
+ grade = "Fail"
+print("Grade:", grade)
